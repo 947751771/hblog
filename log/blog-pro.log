@@ -1,0 +1,5 @@
+2018-08-18 11:14:49.772  INFO 155512 --- [restartedMain] com.huhan.blog.BlogApplication           : Starting BlogApplication on PC-20180326OZBX with PID 155512 (D:\springboot\Hblog\target\classes started by Administrator in D:\springboot\Hblog)
+2018-08-18 11:14:49.773  INFO 155512 --- [restartedMain] com.huhan.blog.BlogApplication           : The following profiles are active: pro
+2018-08-18 11:14:52.288  WARN 155512 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-18 11:14:52.394  WARN 155512 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-08-18 11:14:52.746  INFO 155512 --- [restartedMain] com.huhan.blog.BlogApplication           : Started BlogApplication in 3.862 seconds (JVM running for 4.675)

@@ -1,0 +1,30 @@
+spring:
+  thymeleaf:
+    mode: HTML
+
+  profiles:
+    active: dev   #切换配置环境dev开发环境，pro生产环境
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
