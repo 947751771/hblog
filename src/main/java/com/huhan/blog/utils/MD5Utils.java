@@ -44,7 +44,8 @@ public class MD5Utils {
         }
     }
 
-    /*public static void main(String[] args) {
+    /*e10adc3949ba59abbe56e057f20f883e
+    public static void main(String[] args) {
         System.out.println(MD5Utils.code("123456"));
     }*/
 }
