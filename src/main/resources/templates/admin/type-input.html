@@ -49,12 +49,12 @@
     <!-- 中间内容 -->
     <div class="m-padded-tb-big m-container-small">
         <div class="ui container">
-            <form action="#" method="post" class="ui form">
+            <form action="#" th:action="@{/admin/types}" method="post" class="ui form">
 
                 <div class="field">
                     <div class="ui left labeled input">
                         <label class="ui basic label">名称</label>
-                        <input id="typeName" type="text" name="typeName" placeholder="分类名称">
+                        <input id="typeName" type="text" name="name" placeholder="分类名称">
                     </div>
                 </div>
 
@@ -62,7 +62,7 @@
 
                 <div class="ui right aligned container">
                     <button type="button" class="ui green button" onclick="window.history.go(-1)">返回</button>
-                    <button class="ui teal button">提交</button>
+                    <button class="ui teal submit button">提交</button>
                 </div>
             </form>
         </div>
