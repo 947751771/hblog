@@ -13,7 +13,7 @@
         <div class="ui container">
             <div class="ui inverted menu stackable secondary">
                 <h2 class="ui header teal" style="padding-top: 0.5em;">管理后台</h2>
-                <a href="#" class="activem-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
 
@@ -39,8 +39,8 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" class="item">发布</a>
-                <a href="#" class="item active">列表</a>
+                <a href="#" th:href="@{/admin/types/input}" class="item">发布</a>
+                <a href="#" th:href="@{/admin/types}" class="item active">列表</a>
             </div>
         </div>
     </div>
@@ -48,6 +48,12 @@
     <!-- 中间内容 -->
     <div class="m-padded-tb-huge m-container-small">
         <div class="ui container">
+            <!--操作提示信息-->
+            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">温馨提示</div>
+                <p th:text="${message}">恭喜，操作成功！</p>
+            </div>
             <!--表格-->
             <table class="ui celled table">
                 <thead>
@@ -142,6 +148,11 @@
             on:'hover'
         });
 
+        // 提示框关闭初始化
+        $('.message .close')
+            .on('click', function () {
+                $(this).closest('.message').transition('fade');
+            })
     </script>
 </body>
 </html>

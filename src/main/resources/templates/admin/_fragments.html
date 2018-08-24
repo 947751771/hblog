@@ -18,15 +18,15 @@
     <div class="ui container">
         <div class="ui inverted menu stackable secondary">
             <h2 class="ui header teal" style="padding-top: 0.5em;">管理后台</h2>
-            <a th:href="@{/admin/blogs}" href="#" class="activem-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="mini home icon"></i>博客</a>
+            <a th:href="@{/admin/blogs}" href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="mini home icon"></i>博客</a>
             <a th:href="@{/admin/types}" href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="mini idea icon"></i>分类</a>
             <a th:href="@{/admin/tags}" href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="mini tags icon"></i>标签</a>
 
             <div class="right m-item m-mobile-hide menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
-                        HuHan
+                        <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image" th:src="@{${session.user.avatar}}">
+                        <span th:text="${session.user.nickName}">HUHAN66</span>
                     </div>
                     <i class="icon dropdown"></i>
                     <div class="menu">

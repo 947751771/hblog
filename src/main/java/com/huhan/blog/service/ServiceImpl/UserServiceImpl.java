@@ -1,4 +1,4 @@
-package com.huhan.blog.service.UserServiceImpl;
+package com.huhan.blog.service.ServiceImpl;
 
 import com.huhan.blog.dao.UserRepository;
 import com.huhan.blog.po.User;

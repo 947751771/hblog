@@ -17,7 +17,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     /** 用户昵称 **/
-    private String inckName;
+    private String nickName;
     /** 用户名 **/
     private String userName;
     /** 用户密码 **/
@@ -50,7 +50,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", inckName='" + inckName + '\'' +
+                ", inckName='" + nickName + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
@@ -69,12 +69,12 @@ public class User {
         this.id = id;
     }
 
-    public String getInckName() {
-        return inckName;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setInckName(String inckName) {
-        this.inckName = inckName;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getUserName() {
@@ -133,10 +133,10 @@ public class User {
         this.updateTime = updateTime;
     }
 
-    public User(Long id, String inckName, String userName, String password, String email, String avatar, Integer type, Date createTime, Date updateTime) {
+    public User(Long id, String nickName, String userName, String password, String email, String avatar, Integer type, Date createTime, Date updateTime) {
 
         this.id = id;
-        this.inckName = inckName;
+        this.nickName = nickName;
         this.userName = userName;
         this.password = password;
         this.email = email;

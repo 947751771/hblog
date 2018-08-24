@@ -3,13 +3,14 @@
 <head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类管理</title>
+    <title>标签新增</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" />
     <link rel="stylesheet" href="../../static/css/me.css">
 </head>
 <body>
     <!-- 导航 -->
-    <nav th:replace="admin/_fragments :: menu(2)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <nav th:replace="admin/_fragments :: menu(3)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
         <div class="ui container">
             <div class="ui inverted menu stackable secondary">
                 <h2 class="ui header teal" style="padding-top: 0.5em;">管理后台</h2>
@@ -39,55 +40,58 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" th:href="@{/admin/types/input}" class="item">发布</a>
-                <a href="#" th:href="@{/admin/types}" class="item active">列表</a>
+                <a href="#" th:href="@{/admin/types/input}" class="active item">发布</a>
+                <a href="#" th:href="@{/admin/types}" class="item">列表</a>
             </div>
         </div>
     </div>
 
     <!-- 中间内容 -->
-    <div class="m-padded-tb-huge m-container-small">
+    <div class="m-padded-tb-big m-container-small">
         <div class="ui container">
-            <!--操作提示信息-->
-            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
-                <i class="close icon"></i>
-                <div class="header">温馨提示</div>
-                <p th:text="${message}">恭喜，操作成功！</p>
-            </div>
-            <!--表格-->
-            <table class="ui celled table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>名称</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
+            <form action="#" th:object="${tag}" th:action="*{id}==null ? @{/admin/tags} : @{/admin/tags/{id}(id=*{id})}" method="post" class="ui form">
+                <input type="hidden" name="id" th:value="*{id}">
+                <div class="required field">
+                    <div class="ui left labeled input">
+                        <label class="ui basic label">名称</label>
+                        <input id="tagName" type="text" name="name" th:value="*{name}" placeholder="标签名称">
+                    </div>
+                </div>
 
-                <tbody>
-                    <tr th:each="type, iterStat : ${page.content}">
-                        <td th:text="${iterStat.count}">1</td>
-                        <td th:text="${type.name}">2018-09-18 09:03</td>
-                        <td>
-                            <a th:href="@{/admin/types/{id}/input(id=${type.id})}" href="#" class="ui mini basic teal button">编辑</a>
-                            <a th:href="@{/admin/types/{id}/delete(id=${type.id})}" href="#" class="ui mini red basic button">删除</a>
-                        </td>
-                    </tr>
-                </tbody>
+                <div class="ui error message"></div>
 
-                <tfoot>
-                    <th colspan="6">
-                        <div class="ui pagination mini menu" th:if="${page.totalPages}>1">
-                            <a th:href="@{/admin/types(page=${page.number}-1)}" class="icon item" th:unless="${page.first}">上一页</a>
-                            <a th:href="@{/admin/types(page=${page.number}+1)}" class="icon item" th:unless="${page.last}">下一页</a>
-                        </div>
-                        <a th:href="@{/admin/types/input}" href="#" class="ui button right floated mini teal basic">新增</a>
-                    </th>
-                </tfoot>
-            </table>
+                <!--用于后台校验数据的结果显示-->
+                <!--/*/
+                    <div class="ui negative message" th:if="${#fields.hasErrors('name')}">
+                        <i class="close icon"></i>
+                        <div class="header">验证失败</div>
+                        <p th:errors="*{name}">提交信息不符合规则</p>
+                    </div>
+                /*/-->
+
+                <div class="ui right aligned container">
+                    <button type="button" class="ui green button" onclick="window.history.go(-1)">返回</button>
+                    <button class="ui teal submit button">提交</button>
+                </div>
+            </form>
         </div>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
@@ -134,18 +138,21 @@
         </div>
     </footer>
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
     <script>
-        $(".menu.toggle").click(function () {
-            $(".m-item").toggleClass('m-mobile-hide')
-        })
-
-        $('.ui.dropdown').dropdown({
-            on:'hover'
+        $('.ui.form').form({
+           fields : {
+               name : {
+                   identifier : 'name',
+                   rules :[{
+                       type : 'empty',
+                       prompt: '请输入标签名称'
+                   }]
+               }
+           }
         });
 
         // 提示框关闭初始化

@@ -1,4 +1,4 @@
-package com.huhan.blog.service.UserServiceImpl;
+package com.huhan.blog.service.ServiceImpl;
 
 import com.huhan.blog.dao.TypeRepository;
 import com.huhan.blog.exception.NotFoundException;
@@ -10,6 +10,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
+
+import java.util.List;
 
 /**
  * 分类service
@@ -68,5 +71,18 @@ public class TypeServiceImpl implements TypeService {
 
     public void deleteType(Long id) {
         typeRepository.deleteById(id);
+    }
+
+    /**
+     * 根据分类名称查询
+     * @author  huhan
+     * @data  2018/8/24
+     */
+    public Type getTypeByName(String name) {
+        return typeRepository.findByName(name);
+    }
+
+    public List<Type> listType() {
+        return typeRepository.findAll();
     }
 }
