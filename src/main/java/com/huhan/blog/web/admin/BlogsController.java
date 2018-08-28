@@ -56,16 +56,16 @@ public class BlogsController {
         BlogQuery blogQuery, Model model) {
         model.addAttribute("types", typeService.listType()); // 初始化分类
         model.addAttribute("page", blogService.listBlogs(pageable, blogQuery));
+
         return LIST;
     }
-
 
     /**
      * 搜索
      *
      * @param
-     * @author  huhan
-     * @data  2018/8/28
+     * @author huhan
+     * @data 2018/8/28
      */
     @PostMapping("/blogs/search")
     public String search(
@@ -94,12 +94,12 @@ public class BlogsController {
      * 新增博客
      *
      * @param
-     * @author  huhan
-     * @data  2018/8/28
+     * @author huhan
+     * @data 2018/8/28
      */
     @PostMapping("/blogs")
     public String post(Blog blog, HttpSession session, RedirectAttributes attributes) {
-        blog.setUser((User) session.getAttribute("user"));
+        blog.setUser((User)session.getAttribute("user"));
         blog.setType(typeService.getType(blog.getType().getId())); // 设置分类
         blog.setTags(tagService.listTag(blog.getTagIds())); // 设置标签
 
