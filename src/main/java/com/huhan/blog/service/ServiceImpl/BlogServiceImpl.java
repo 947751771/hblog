@@ -20,6 +20,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -38,16 +39,12 @@ public class BlogServiceImpl implements BlogService {
     }
 
     /**
-     * 分页动态查询博客信息
-     * jpa封装：
-     *      1、在到层实现JpaSpecificationExecutor接口；
-     *      2、findAll方法中的第一个参数Specification对象；
-     *          root：查询的对象
-     *          cq：封装的查询条件
-     *          cb：条件的表达式：< > like ....
+     * 分页动态查询博客信息 jpa封装： 1、在到层实现JpaSpecificationExecutor接口； 2、findAll方法中的第一个参数Specification对象； root：查询的对象 cq：封装的查询条件
+     * cb：条件的表达式：< > like ....
+     *
      * @param
-     * @author  huhan
-     * @data  2018/8/24
+     * @author huhan
+     * @data 2018/8/24
      */
     public Page<Blog> listBlogs(Pageable pageable, BlogQuery blogQuery) {
 
@@ -55,12 +52,12 @@ public class BlogServiceImpl implements BlogService {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
                 List<Predicate> predicates = new ArrayList<>();
-                if (!blogQuery.getTitle().equals("") && blogQuery.getTitle() != null) {
+                if (!"".equals(blogQuery.getTitle()) && blogQuery.getTitle() != null) {
                     predicates.add(cb.like(root.<String>get("title"), "%" + blogQuery.getTitle() + "%"));
                 }
 
                 if (blogQuery.getTypeId() != null) {
-                    predicates.add(cb.equal(root.<Long>get("typeId"), blogQuery.getTypeId()));
+                    predicates.add(cb.equal(root.<Long>get("type").get("id"), blogQuery.getTypeId()));
                 }
 
                 if (blogQuery.isRecommend()) {
@@ -72,7 +69,18 @@ public class BlogServiceImpl implements BlogService {
         }, pageable);
     }
 
+    /**
+     * 新增博客
+     *
+     * @param
+     * @author  huhan
+     * @data  2018/8/28
+     */
     public Blog save(Blog blog) {
+        blog.setCreateTime(new Date());
+        blog.setUpdateTime(new Date());
+        blog.setViews(0);
+
         return blogRepository.save(blog);
     }
 

@@ -56,16 +56,19 @@
                     </div>
 
                     <div class="field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="typeId" />
-                            <i class="dropdown icon"></i>
-                            <div class="default text">分类</div>
-                            <div class="menu">
-                                <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">Html</div>
-                                <!--/*-->
-                                <div class="item" data-value="2">CSS</div>
-                                <!--*/-->
+                        <div class="ui labeled action input">
+                            <div class="ui type selection dropdown">
+                                <input type="hidden" name="typeId" />
+                                <i class="dropdown icon"></i>
+                                <div class="default text">分类</div>
+                                <div class="menu">
+                                    <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">Html</div>
+                                    <!--/*-->
+                                    <div class="item" data-value="2">CSS</div>
+                                    <!--*/-->
+                                </div>
                             </div>
+                            <button id="clear" class="ui compact button">clear</button>
                         </div>
                     </div>
 
@@ -90,6 +93,7 @@
                         <th>标题</th>
                         <th>类型</th>
                         <th>推荐</th>
+                        <th>状态</th>
                         <th>更新时间</th>
                         <th>操作</th>
                     </tr>
@@ -100,7 +104,8 @@
                         <td th:text="${iterStat.count}">1</td>
                         <td th:text="${blog.title}">刻意的练习</td>
                         <td th:text="${blog.type.name}">java</td>
-                        <td th:text="${blog.recommend} ? '是' : '否'">是</td>
+                        <td th:text="${blog.recommend} ? '是' : '否'"></td>
+                        <td th:text="${blog.published} ? '发布' : '草稿'"></td>
                         <td th:text="${blog.updateTime}">2018-09-18 09:03</td>
                         <td>
                             <a th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" href="#" class="ui mini basic teal button">编辑</a>
@@ -110,15 +115,23 @@
                     </tbody>
 
                     <tfoot>
-                    <th colspan="6">
+                    <th colspan="7">
                         <div class="ui pagination mini menu" th:if="${page.totalPages}>1">
                             <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="icon item" th:unless="${page.first}">上一页</a>
                             <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="icon item" th:unless="${page.last}">下一页</a>
                         </div>
-                        <a href="#" class="ui button right floated mini teal basic">新增</a>
+                        <a href="#" th:href="@{/admin/blogs/input}" class="ui button right floated mini teal basic">新增</a>
                     </th>
                     </tfoot>
                 </table>
+
+                <!--操作提示信息-->
+                <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                    <i class="close icon"></i>
+                    <div class="header">温馨提示</div>
+                    <p th:text="${message}">恭喜，操作成功！</p>
+                </div>
+
             </div>
 
         </div>
@@ -169,8 +182,10 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <!--/*/</th:block>/*/-->
 
     <script>
         $(".menu.toggle").click(function () {
@@ -187,6 +202,7 @@
         }
 
         $("#search-btn").click(function () {
+            $("[name='page']").val(0);
             loaddata();
         });
 
@@ -197,7 +213,18 @@
                 recommend:$("[name='recommend']").prop('checked'),
                 page:$("[name='page']").val()
             });
-        }
+        };
+
+        // 提示框关闭初始化
+        $('.message .close')
+            .on('click', function () {
+                $(this).closest('.message').transition('fade');
+            });
+
+        $('#clear')
+            .on('click', function () {
+                $('.ui.type.dropdown').dropdown('clear');
+            });
     </script>
 </body>
 </html>

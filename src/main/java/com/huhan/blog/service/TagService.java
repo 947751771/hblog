@@ -4,6 +4,8 @@ import com.huhan.blog.po.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 /**
  * 标签service
  * @Author: huhan
@@ -21,4 +23,8 @@ public interface TagService {
     void deleteById(Long id);
 
     Tag findTagByName(String name);
+
+    List<Tag> listTag();
+
+    List<Tag> listTag(String ids);
 }

@@ -21,8 +21,10 @@ public class Blog {
      **/
     private String title;
     /**
-     * 博客内容
+     * 博客内容(大文本字段)
      **/
+    @Lob
+    @Basic(fetch = FetchType.LAZY)
     private String content;
     /**
      * 博客首图
@@ -81,6 +83,17 @@ public class Blog {
 
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>();
+
+    @Transient
+    private String tagIds;
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
+    }
 
     public List<Comment> getComments() {
         return comments;

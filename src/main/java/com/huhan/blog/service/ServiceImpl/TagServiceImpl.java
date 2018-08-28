@@ -11,8 +11,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 标签service实现类
+ * 
  * @author huhan
  * @data 2018/8/24
  */
@@ -50,5 +54,40 @@ public class TagServiceImpl implements TagService {
 
     public Tag findTagByName(String name) {
         return tagRepository.findTagByName(name);
+    }
+
+    public List<Tag> listTag() {
+        return tagRepository.findAll();
+    }
+
+    /**
+     * 根据ids查询标签集合；ids "1,2,3,4....."
+     *
+     * @param
+     * @author  huhan
+     * @data  2018/8/28
+     */
+    public List<Tag> listTag(String ids) {
+
+        return tagRepository.findAllById(converToList(ids));
+    }
+
+    /**
+     * 将ids字符串转化为long类型的集合
+     *
+     * @param  ids
+     * @author  huhan
+     * @data  2018/8/28
+     */
+    private List<Long> converToList(String ids) {
+        List<Long> list = new ArrayList<>();
+        if (!ids.equals("") && ids != null) {
+            String[] strs = ids.split(",");
+            for (int i = 0; i < strs.length; i++) {
+                list.add(new Long(strs[i]));
+            }
+        }
+
+        return list;
     }
 }
