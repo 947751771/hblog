@@ -14,7 +14,7 @@
         <div class="ui container">
             <div class="ui inverted menu stackable secondary">
                 <h2 class="ui header teal" style="padding-top: 0.5em;">管理后台</h2>
-                <a href="#" class="activem-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
                 <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
 
@@ -40,8 +40,8 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" class="item active">发布</a>
-                <a href="#" class="item">列表</a>
+                <a href="#" th:href="@{/admin/types/input}" class="active item">发布</a>
+                <a href="#" th:href="@{/admin/types}" class="item">列表</a>
             </div>
         </div>
     </div>
@@ -49,16 +49,24 @@
     <!-- 中间内容 -->
     <div class="m-padded-tb-big m-container-small">
         <div class="ui container">
-            <form action="#" th:action="@{/admin/types}" method="post" class="ui form">
-
-                <div class="field">
+            <form action="#" th:object="${type}" th:action="*{id}==null ? @{/admin/types} : @{/admin/types/{id}(id=*{id})}" method="post" class="ui form">
+                <input type="hidden" name="id" th:value="*{id}">
+                <div class="required field">
                     <div class="ui left labeled input">
                         <label class="ui basic label">名称</label>
-                        <input id="typeName" type="text" name="name" placeholder="分类名称">
+                        <input id="typeName" type="text" name="name" th:value="*{name}" placeholder="分类名称">
                     </div>
                 </div>
 
                 <div class="ui error message"></div>
+
+                <!--/*/
+                    <div class="ui negative message" th:if="${#fields.hasErrors('name')}">
+                        <i class="close icon"></i>
+                        <div class="header">验证失败</div>
+                        <p th:errors="*{name}">提交信息不符合规则</p>
+                    </div>
+                /*/-->
 
                 <div class="ui right aligned container">
                     <button type="button" class="ui green button" onclick="window.history.go(-1)">返回</button>
@@ -136,16 +144,21 @@
     <script>
         $('.ui.form').form({
            fields : {
-               title : {
-                   identifier : 'title',
+               name : {
+                   identifier : 'name',
                    rules :[{
                        type : 'empty',
-                       prompt: '请输入标题'
+                       prompt: '请输入分类名称'
                    }]
                }
            }
         });
 
+        // 提示框关闭初始化
+        $('.message .close')
+            .on('click', function () {
+                $(this).closest('.message').transition('fade');
+            })
     </script>
 </body>
 </html>

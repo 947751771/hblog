@@ -19,8 +19,7 @@ public class TypeServiceImplTest {
     private TypeRepository typeRepository;
 
     @Test
-    public void save() {
-    }
+    public void save() {}
 
     @Test
     public void getType() {
@@ -30,14 +29,11 @@ public class TypeServiceImplTest {
     }
 
     @Test
-    public void listType() {
-    }
+    public void listType() {}
 
     @Test
-    public void updateType() {
-    }
+    public void updateType() {}
 
     @Test
-    public void deleteType() {
-    }
+    public void deleteType() {}
 }

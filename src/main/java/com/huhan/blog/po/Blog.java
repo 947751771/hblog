@@ -21,8 +21,10 @@ public class Blog {
      **/
     private String title;
     /**
-     * 博客内容
+     * 博客内容(大文本字段)
      **/
+    @Lob
+    @Basic(fetch = FetchType.LAZY)
     private String content;
     /**
      * 博客首图
@@ -81,6 +83,17 @@ public class Blog {
 
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>();
+
+    @Transient
+    private String tagIds;
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
+    }
 
     public List<Comment> getComments() {
         return comments;
@@ -254,5 +267,33 @@ public class Blog {
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 '}';
+    }
+
+    public void init() {
+        this.tagIds = tagsToIds(this.getTags());
+    }
+
+    /**
+     * 封装返回的tagIds
+     *
+     * @param tags
+     * @return  1,2,3...
+     */
+    private String tagsToIds(List<Tag> tags) {
+        if (!tags.isEmpty()) {
+            StringBuffer ids = new StringBuffer();
+            boolean flag = false;
+            for (Tag tag : tags) {
+                if (flag) {
+                    ids.append(",");
+                } else {
+                    flag = true;
+                }
+                ids.append(tag.getId());
+            }
+            return ids.toString();
+        } else {
+            return tagIds;
+        }
     }
 }
