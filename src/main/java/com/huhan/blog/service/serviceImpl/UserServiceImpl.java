@@ -1,4 +1,4 @@
-package com.huhan.blog.service.ServiceImpl;
+package com.huhan.blog.service.serviceImpl;
 
 import com.huhan.blog.dao.UserRepository;
 import com.huhan.blog.po.User;
@@ -17,6 +17,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
+    @Override
     public User checkUser(String userName, String password) {
             User user = userRepository.findByUserNameAndPassword(userName, MD5Utils.code(password));
         return user;

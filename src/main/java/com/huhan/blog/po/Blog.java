@@ -59,6 +59,11 @@ public class Blog {
      **/
     private boolean recommend;
     /**
+     * 博客描述
+     */
+    private String description;
+
+    /**
      * 创建时间
      **/
     @Temporal(TemporalType.TIMESTAMP)
@@ -128,22 +133,6 @@ public class Blog {
     }
 
     public Blog() {
-    }
-
-    public Blog(Long id, String title, String content, String firstPicture, String flag, Integer views, boolean appreciation, boolean shareStatement, boolean commentabled, boolean published, boolean recommend, Date createTime, Date updateTime) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.firstPicture = firstPicture;
-        this.flag = flag;
-        this.views = views;
-        this.appreciation = appreciation;
-        this.shareStatement = shareStatement;
-        this.commentabled = commentabled;
-        this.published = published;
-        this.recommend = recommend;
-        this.createTime = createTime;
-        this.updateTime = updateTime;
     }
 
     public Long getId() {
@@ -250,6 +239,63 @@ public class Blog {
         this.updateTime = updateTime;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void init() {
+        this.tagIds = tagsToIds(this.getTags());
+    }
+
+    /**
+     * 封装返回的tagIds
+     *
+     * @param tags
+     * @return  1,2,3...
+     */
+    private String tagsToIds(List<Tag> tags) {
+        if (!tags.isEmpty()) {
+            StringBuffer ids = new StringBuffer();
+            boolean flag = false;
+            for (Tag tag : tags) {
+                if (flag) {
+                    ids.append(",");
+                } else {
+                    flag = true;
+                }
+                ids.append(tag.getId());
+            }
+            return ids.toString();
+        } else {
+            return tagIds;
+        }
+    }
+
+    public Blog(String title, String content, String firstPicture, String flag, Integer views, boolean appreciation, boolean shareStatement, boolean commentabled, boolean published, boolean recommend, String description, Date createTime, Date updateTime, Type type, List<Tag> tags, User user, List<Comment> comments, String tagIds) {
+        this.title = title;
+        this.content = content;
+        this.firstPicture = firstPicture;
+        this.flag = flag;
+        this.views = views;
+        this.appreciation = appreciation;
+        this.shareStatement = shareStatement;
+        this.commentabled = commentabled;
+        this.published = published;
+        this.recommend = recommend;
+        this.description = description;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+        this.type = type;
+        this.tags = tags;
+        this.user = user;
+        this.comments = comments;
+        this.tagIds = tagIds;
+    }
+
     @Override
     public String toString() {
         return "Blog{" +
@@ -264,8 +310,14 @@ public class Blog {
                 ", commentabled=" + commentabled +
                 ", published=" + published +
                 ", recommend=" + recommend +
+                ", description='" + description + '\'' +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", user=" + user +
+                ", comments=" + comments +
+                ", tagIds='" + tagIds + '\'' +
                 '}';
     }
 }

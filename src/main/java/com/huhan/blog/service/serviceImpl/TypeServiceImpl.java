@@ -1,4 +1,4 @@
-package com.huhan.blog.service.ServiceImpl;
+package com.huhan.blog.service.serviceImpl;
 
 import com.huhan.blog.dao.TypeRepository;
 import com.huhan.blog.exception.NotFoundException;
@@ -7,10 +7,11 @@ import com.huhan.blog.service.TypeService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 
 import java.util.List;
 
@@ -31,6 +32,7 @@ public class TypeServiceImpl implements TypeService {
      * @param type
      * @return
      */
+    @Override
     public Type save(Type type) {
         return typeRepository.save(type);
     }
@@ -40,6 +42,7 @@ public class TypeServiceImpl implements TypeService {
      * @param id
      * @return
      */
+    @Override
     public Type getType(Long id) {
         return typeRepository.getOne(id);
     }
@@ -49,6 +52,7 @@ public class TypeServiceImpl implements TypeService {
      * @param pageable
      * @return
      */
+    @Override
     public Page<Type> listType(Pageable pageable) {
         return typeRepository.findAll(pageable);
     }
@@ -59,6 +63,7 @@ public class TypeServiceImpl implements TypeService {
      * @param type
      * @return
      */
+    @Override
     public Type updateType(Long id, Type type) {
         Type t = typeRepository.getOne(id);
         if (t == null) {
@@ -69,6 +74,7 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.save(t);
     }
 
+    @Override
     public void deleteType(Long id) {
         typeRepository.deleteById(id);
     }
@@ -78,11 +84,21 @@ public class TypeServiceImpl implements TypeService {
      * @author  huhan
      * @data  2018/8/24
      */
+    @Override
     public Type getTypeByName(String name) {
         return typeRepository.findByName(name);
     }
 
+    @Override
     public List<Type> listType() {
         return typeRepository.findAll();
+    }
+
+    @Override
+    public List<Type> listTypeTop(Integer size) {
+        Sort sort = new Sort(Sort.Direction.DESC, "blogs.size");
+        Pageable pageable = new PageRequest(0, size, sort);
+
+        return typeRepository.findTop(pageable);
     }
 }
