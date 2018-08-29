@@ -1,7 +1,6 @@
 package com.huhan.blog.web.admin;
 
 import com.huhan.blog.po.Blog;
-import com.huhan.blog.po.Type;
 import com.huhan.blog.po.User;
 import com.huhan.blog.service.BlogService;
 import com.huhan.blog.service.TagService;
@@ -55,7 +54,8 @@ public class BlogsController {
     public String list(
         @PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
         BlogQuery blogQuery, Model model) {
-        model.addAttribute("types", typeService.listType()); // 初始化分类
+        // 初始化分类
+        model.addAttribute("types", typeService.listType());
         model.addAttribute("page", blogService.listBlogs(pageable, blogQuery));
 
         return LIST;
@@ -96,8 +96,10 @@ public class BlogsController {
      * @param model
      */
     private void setTypeAndTag(Model model) {
-        model.addAttribute("types", typeService.listType()); // 初始化分类
-        model.addAttribute("tags", tagService.listTag()); // 初始化标签
+        // 初始化分类
+        model.addAttribute("types", typeService.listType());
+        // 初始化标签
+        model.addAttribute("tags", tagService.listTag());
     }
 
     /**
@@ -125,8 +127,10 @@ public class BlogsController {
     @PostMapping("/blogs")
     public String post(Blog blog, HttpSession session, RedirectAttributes attributes) {
         blog.setUser((User)session.getAttribute("user"));
-        blog.setType(typeService.getType(blog.getType().getId())); // 设置分类
-        blog.setTags(tagService.listTag(blog.getTagIds())); // 设置标签
+        // 设置分类
+        blog.setType(typeService.getType(blog.getType().getId()));
+        // 设置标签
+        blog.setTags(tagService.listTag(blog.getTagIds()));
 
         Blog saveBlog = blogService.save(blog);
         if (saveBlog == null) {
