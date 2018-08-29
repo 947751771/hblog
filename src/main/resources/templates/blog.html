@@ -536,7 +536,7 @@ h5,h6{font-size:1em;}
                             <div class="content">
                                 <a class="author" th:text="${comment.nickName}">Matt</a>
                                 <div class="metadata">
-                                    <span class="date" th:text="${#datas.format(comment.creatTime, 'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
+                                    <span class="date" th:text="${#dates.format(comment.createDate, 'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
                                 </div>
                                 <div class="text" th:text="${comment.content}">太赞了！</div>
                                 <div class="actions">
@@ -603,8 +603,8 @@ h5,h6{font-size:1em;}
 
             <!--提交留言区-->
             <div id="comment-form" class="ui form">
-                <input type="text" name="blog.id" th:value="${blog.id}">
-                <input type="text" name="parentComment.id" value="-1">
+                <input type="hidden" name="blog.id" th:value="${blog.id}">
+                <input type="hidden" name="parentComment.id" value="-1">
                 <div class="field">
                     <textarea name="content" id="comment-container" placeholder="请输入评论信息..." cols="30"
                               rows="10"></textarea>

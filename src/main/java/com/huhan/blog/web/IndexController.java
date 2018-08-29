@@ -1,6 +1,7 @@
 package com.huhan.blog.web;
 
 import com.huhan.blog.service.BlogService;
+import com.huhan.blog.service.CommentService;
 import com.huhan.blog.service.TagService;
 import com.huhan.blog.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,9 @@ public class IndexController {
 
     @Autowired
     private TagService tagService;
+
+    @Autowired
+    private CommentService commentService;
 
     /**
      * 首页
@@ -75,6 +79,7 @@ public class IndexController {
     @RequestMapping("/blog/{id}")
     public String blog(@PathVariable Long id, Model model) {
         model.addAttribute("blog", blogService.getAndConvert(id));
+        model.addAttribute("comments", commentService.listCommentByBlogId(id));
 
         return "blog";
     }
