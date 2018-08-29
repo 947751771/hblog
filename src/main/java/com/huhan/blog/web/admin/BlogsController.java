@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
+import javax.xml.ws.spi.http.HttpHandler;
 
 /**
  * Blog控制层
@@ -132,7 +133,13 @@ public class BlogsController {
         // 设置标签
         blog.setTags(tagService.listTag(blog.getTagIds()));
 
-        Blog saveBlog = blogService.save(blog);
+        Blog saveBlog;
+        if (blog.getId() == null) {
+            saveBlog = blogService.save(blog);
+        } else {
+            saveBlog = blogService.updateBlog(blog, blog.getId());
+        }
+
         if (saveBlog == null) {
             attributes.addFlashAttribute("message", "新增博客失败！");
         }
@@ -141,6 +148,14 @@ public class BlogsController {
         return REDIRECT_LIST;
     }
 
+    /**
+     * 根据id删除博客信息
+     *
+     * @param id
+     * @param attributes
+     * @author huhan
+     * @data 2018/8/29
+     */
     @GetMapping("/blogs/{id}/delete")
     public String deleteBlogById(@PathVariable Long id, RedirectAttributes attributes) {
         blogService.deleteBlog(id);

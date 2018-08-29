@@ -96,7 +96,7 @@
                         <div class="ui left labeled action input">
                             <label class="ui compact basic label">标签</label>
                             <div class="ui selection multiple search fluid dropdown">
-                                <input type="hidden" name="tagIds" th:href="*{tagIds}"/>
+                                <input type="hidden" name="tagIds" th:value="*{tagIds}"/>
                                 <i class="icon dropdown"></i>
                                 <div class="default text">标签</div>
                                 <div class="menu">
@@ -118,6 +118,9 @@
                     </div>
                 </div>
 
+                <div class="required field">
+                    <textarea th:text="*{description}" name="description" id="description" maxlength="200" placeholder="博客描述..."></textarea>
+                </div>
 
                 <div class="inline fields">
                     <div class="field">
@@ -270,6 +273,13 @@
                    rules :[{
                        type : 'empty',
                        prompt: '请输入博客首图'
+                   }]
+               },
+               description : {
+                   identifier : 'description',
+                   rules :[{
+                       type : 'empty',
+                       prompt: '请输入博客描述'
                    }]
                },
            }

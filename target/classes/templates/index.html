@@ -45,7 +45,7 @@
                             </div>
 
                             <div class="right aligned column">
-                                共 <h3 class="ui orange header m-inline-block m-text-thin">14</h3> 篇
+                                共 <h3 class="ui orange header m-inline-block m-text-thin" th:text="${page.totalElements}">14</h3> 篇
                             </div>
 
                         </div>
@@ -53,6 +53,45 @@
 
                     <!--中间的内容-->
                     <div class="ui attached segment">
+                        <div class="ui segment vertical padded m-padded-tb-large" th:each="blog : ${page.content}">
+                            <div class="ui middle aligned mobile reversed stackable grid">
+                                <div class="ui eleven wide column">
+                                    <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" th:text="${blog.title}" class="m-black">你真的理解什么是财富自由吗？</a></h3>
+                                    <p class="m-text" th:text="|${blog.description}......|">
+                                        财务自由是指人无需为生活开销而努力为钱工作的状态。简单地说，一个人的资产产生的被动收入必须至少要等于或超过他的日常开支，如果进入这种状态，就可以称之为财务自由
+                                        .....
+                                    </p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui horizontal mini link list">
+                                                <div class="ui item">
+                                                    <img th:src="@{${blog.user.avatar}}" src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+                                                    <div class="content"><a href="#" th:text="${blog.user.nickName}" class="header">胡汉6</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2018-08-16</span>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i><span th:text="${blog.views}">2342</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" target="_blank" th:text="${blog.type.name}" class="ui teal basic label m-padded-tiny m-opacity-mini">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--右侧图片-->
+                                <div class="five wide column">
+                                    <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                        <img th:src="@{${blog.firstPicture}}" src="https://unsplash.it/800/450?image=1005"
+                                             alt="" class="ui rounded image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--/*-->
                         <div class="ui segment vertical padded m-padded-tb-large">
                             <div class="ui mobile reversed stackable grid">
                                 <div class="ui eleven wide column">
@@ -164,54 +203,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ui segment vertical padded m-padded-tb-large">
-                            <div class="ui mobile reversed stackable grid">
-                                <div class="ui eleven wide column">
-                                    <h3 class="ui header">你真的理解什么是财富自由吗？</h3>
-                                    <p class="m-text">
-                                        财务自由是指人无需为生活开销而努力为钱工作的状态。简单地说，一个人的资产产生的被动收入必须至少要等于或超过他的日常开支，如果进入这种状态，就可以称之为财务自由
-                                        .....
-                                    </p>
-                                    <div class="ui grid">
-                                        <div class="eleven wide column">
-                                            <div class="ui horizontal mini link list">
-                                                <div class="ui item">
-                                                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
-                                                    <div class="content"><a href="#" class="header">胡汉6</a></div>
-                                                </div>
-                                                <div class="item">
-                                                    <i class="calendar icon"></i>2018-08-16
-                                                </div>
-                                                <div class="item">
-                                                    <i class="eye icon"></i>2342
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="right aligned five wide column">
-                                            <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-opacity-mini">认知升级</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--右侧图片-->
-                                <div class="five wide column">
-                                    <a href="#" target="_blank">
-                                        <img src="https://unsplash.it/800/450?image=1005"
-                                             alt="" class="ui rounded image">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <!--*/-->
                     </div>
 
                     <!--文章底部内容-->
-                    <div class="ui bottom attached segment">
+                    <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
                         <div class="ui middle two column grid">
                             <div class="column">
-                                <a href="#" class="ui teal basic mini button">上一页</a>
+                                <a th:href="@{/(page=${page.number}-1)}" class="ui teal basic mini button" th:unless="${page.first}">上一页</a>
                             </div>
 
                             <div class="right aligned column">
-                                <a href="#" class="ui teal basic mini button">下一页</a>
+                                <a th:href="@{/(page=${page.number}+1)}" class="ui teal basic mini button" th:unless="${page.last}">下一页</a>
                             </div>
 
                         </div>
@@ -234,6 +237,11 @@
                         </div>
                         <div class="ui teal segment">
                             <div class="ui fluid vertical menu">
+                                <a href="" class="item" th:each="type : ${types}">
+                                    <span th:text="${type.name}"></span>学习日志
+                                    <div th:text="${#arrays.length(type.blogs)}" class="ui teal basic left pointing label">13</div>
+                                </a>
+                                <!--/*-->
                                 <a href="" class="item">
                                     学习日志
                                     <div class="ui teal basic left pointing label">13</div>
@@ -254,10 +262,7 @@
                                     学习日志
                                     <div class="ui teal basic left pointing label">13</div>
                                 </a>
-                                <a href="" class="item">
-                                    学习日志
-                                    <div class="ui teal basic left pointing label">13</div>
-                                </a>
+                                <!--*/-->
                             </div>
                         </div>
                     </div>
@@ -276,6 +281,11 @@
                         </div>
 
                         <div class="ui teal segment">
+                            <a href="#" th:each="tag:${tags}" target="_blank" class="ui teal basic label m-margin-tb-tiny">
+                                <span th:text="${tag.name}"></span>方法论
+                                <div class="detail" th:text="${#arrays.length(tag.blogs)}">13</div>
+                            </a>
+                            <!--/*-->
                             <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
                                 方法论
                                 <div class="detail">13</div>
@@ -304,10 +314,7 @@
                                 方法论
                                 <div class="detail">13</div>
                             </a>
-                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-tiny">
-                                方法论
-                                <div class="detail">13</div>
-                            </a>
+                            <!--*/-->
                         </div>
                     </div>
                     <!--最新推荐-->
@@ -315,6 +322,10 @@
                         <div class="ui secondary segment">
                             <i class="bookmark icon"></i>最新推荐
                         </div>
+                        <div class="ui segment" th:each="blog : ${blogs}">
+                            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}" target="_blank" class="m-black m-text-thin">用户故事(user story)</a>
+                        </div>
+                        <!--/*-->
                         <div class="ui segment">
                             <a href="#" target="_blank" class="m-black m-text-thin">用户故事(user story)</a>
                         </div>
@@ -333,9 +344,7 @@
                         <div class="ui segment">
                             <a href="#" target="_blank" class="m-black m-text-thin">用户故事(user story)</a>
                         </div>
-                        <div class="ui segment">
-                            <a href="#" target="_blank" class="m-black m-text-thin">用户故事(user story)</a>
-                        </div>
+                        <!--*/-->
                     </div>
 
                     <!--二维码-->
