@@ -30,7 +30,7 @@ import java.util.List;
  * @data 2018/8/24
  */
 @Service
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 public class BlogServiceImpl implements BlogService {
 
     @Autowired
@@ -51,6 +51,8 @@ public class BlogServiceImpl implements BlogService {
         BeanUtils.copyProperties(blog, b);
         String content = b.getContent();
         b.setContent(MarkDownUtils.markdownToHtmlExtensions(content));
+        // 增加博客的浏览次数
+        blogRepository.updateViews(id);
 
         return b;
     }

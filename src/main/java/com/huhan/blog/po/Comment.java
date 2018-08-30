@@ -38,6 +38,11 @@ public class Comment {
     @ManyToOne
     private Comment parentComment;
 
+    /**
+     * 是否是管理员评论
+     */
+    private boolean adminComment;
+
     public List<Comment> getReplyComment() {
         return replyComment;
     }
@@ -63,18 +68,6 @@ public class Comment {
     }
 
     public Comment() {
-    }
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", nickName='" + nickName + '\'' +
-                ", email='" + email + '\'' +
-                ", content='" + content + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", createDate=" + createDate +
-                '}';
     }
 
     public Long getId() {
@@ -125,12 +118,39 @@ public class Comment {
         this.createDate = createDate;
     }
 
-    public Comment(String nickName, String email, String content, String avatar, Date createDate) {
+    public boolean isAdminComment() {
+        return adminComment;
+    }
 
+    public void setAdminComment(boolean adminComment) {
+        this.adminComment = adminComment;
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", nickName='" + nickName + '\'' +
+                ", email='" + email + '\'' +
+                ", content='" + content + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", createDate=" + createDate +
+                ", blog=" + blog +
+                ", replyComment=" + replyComment +
+                ", parentComment=" + parentComment +
+                ", adminComment=" + adminComment +
+                '}';
+    }
+
+    public Comment(String nickName, String email, String content, String avatar, Date createDate, Blog blog, List<Comment> replyComment, Comment parentComment, boolean adminComment) {
         this.nickName = nickName;
         this.email = email;
         this.content = content;
         this.avatar = avatar;
         this.createDate = createDate;
+        this.blog = blog;
+        this.replyComment = replyComment;
+        this.parentComment = parentComment;
+        this.adminComment = adminComment;
     }
 }

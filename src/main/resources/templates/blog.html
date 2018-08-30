@@ -534,7 +534,10 @@ h5,h6{font-size:1em;}
                                 <img th:src="@{${comment.avatar}}" src="https://unsplash.it/100/100?image=1005">
                             </a>
                             <div class="content">
-                                <a class="author" th:text="${comment.nickName}">Matt</a>
+                                <a class="author">
+                                    <span th:text="${comment.nickName}">Matt</span>
+                                    <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${comment.adminComment}">博主</div>
+                                </a>
                                 <div class="metadata">
                                     <span class="date" th:text="${#dates.format(comment.createDate, 'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
                                 </div>
@@ -551,7 +554,9 @@ h5,h6{font-size:1em;}
                                     </a>
                                     <div class="content">
                                         <a class="author">
-                                            <span th:text="${reply.nickName}">Matt</span>&nbsp;<span style="color: #00a8c6" th:text="|@ ${reply.parentComment.nickName}|">@ Elliot Fu</span>
+                                            <span th:text="${reply.nickName}">Matt</span>
+                                            <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>
+                                            &nbsp;<span style="color: #00a8c6" th:text="|@ ${reply.parentComment.nickName}|">@ Elliot Fu</span>
                                         </a>
                                         <div class="metadata">
                                             <span class="date" th:text="${#dates.format(reply.createDate, 'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
@@ -633,14 +638,14 @@ h5,h6{font-size:1em;}
                     <div class="field m-mobile-wide m-margin-bottom-mini">
                         <div class="ui left icon input">
                             <i class="user icon"></i>
-                            <input type="text" name="nickName" placeholder="请输入姓名">
+                            <input type="text" name="nickName" placeholder="请输入姓名" th:value="${session.user} != null ? ${session.user.nickName}">
                         </div>
                     </div>
 
                     <div class="field m-mobile-wide m-margin-bottom-mini">
                         <div class="ui left icon input">
                             <i class="mail icon"></i>
-                            <input type="text" name="email" placeholder="请输入邮箱">
+                            <input type="text" name="email" placeholder="请输入邮箱" th:value="${session.user} != null ? ${session.user.email}">
                         </div>
                     </div>
 
@@ -841,7 +846,7 @@ h5,h6{font-size:1em;}
             "email" : $("[name='email']").val(),
             "content" : $("[name='content']").val()
         }, function (responseTxt, statusTxt, xhr) {
-            $(window).scrollTo($('#content-container'), 500);
+            // $(window).scrollTo($('#content-container'), 500);
             clearContent();
         });
     }

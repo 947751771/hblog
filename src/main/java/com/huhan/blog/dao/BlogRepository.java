@@ -5,12 +5,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
 /**
- *
  * @Author: huhan
  * @Date: 16:01 2018/8/24
  */
@@ -26,7 +26,23 @@ public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificat
     List<Blog> findBlogTop(Pageable pageable);
 
 
-    // select * from blog where title like '%s%'
+    /**
+     * select * from blog where title like '%s%'
+     *
+     * @param query
+     * @param pageable
+     * @return
+     */
     @Query("select b from Blog b where b.title like ?1 or b.content like ?1")
     Page<Blog> findByQuery(String query, Pageable pageable);
+
+    /**
+     * 增加博客的浏览次数
+     *
+     * @param id
+     * @return
+     */
+    @Modifying
+    @Query("update Blog b set b.views = b.views + 1 where b.id = ?1")
+    int updateViews(Long id);
 }
