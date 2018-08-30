@@ -1,9 +1,9 @@
 package com.huhan.blog.web.admin;
 
 import com.huhan.blog.po.Blog;
-import com.huhan.blog.po.Type;
 import com.huhan.blog.po.User;
 import com.huhan.blog.service.BlogService;
+import com.huhan.blog.service.CommentService;
 import com.huhan.blog.service.TagService;
 import com.huhan.blog.service.TypeService;
 import com.huhan.blog.vo.BlogQuery;

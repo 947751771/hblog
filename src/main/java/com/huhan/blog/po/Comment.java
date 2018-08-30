@@ -1,6 +1,7 @@
 package com.huhan.blog.po;
 
 import javax.persistence.*;
+import javax.persistence.GenerationType;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,7 +27,7 @@ public class Comment {
     private String avatar;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createDate;
+    private Date createDate = new Date();
 
     @ManyToOne
     private Blog blog;

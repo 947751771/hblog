@@ -42,7 +42,8 @@ public class LogAspect {
         Object[] args = point.getArgs();
         RequestLog requestLog = new RequestLog(url, ip, classMethod, args);
 
-        logger.info("Request: {}", requestLog);
+        logger.info("***************请求记录**************");
+        logger.info("请求记录信息: {}", requestLog);
     }
 
     @After("log()")
@@ -52,6 +53,7 @@ public class LogAspect {
 
     @AfterReturning(returning = "result", pointcut = "log()")
     public void doAfterReturn(Object result) {
+        logger.info("***************响应结果***************");
         logger.info("Result: {}", result);
     }
 
@@ -91,10 +93,10 @@ public class LogAspect {
         @Override
         public String toString() {
             return "RequestLog{" +
-                    "url='" + url + '\'' +
-                    ", ip='" + ip + '\'' +
-                    ", classMethod='" + classMethod + '\'' +
-                    ", args=" + Arrays.toString(args) +
+                    "请求地址='" + url + '\'' +
+                    ", 请求的ip='" + ip + '\'' +
+                    ", 请求类中的方法='" + classMethod + '\'' +
+                    ", 请求参数=" + Arrays.toString(args) +
                     '}';
         }
     }
