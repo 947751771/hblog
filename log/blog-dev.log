@@ -10166,3 +10166,762 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2018-08-30 19:57:23.839  INFO 11388 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/3', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[3, {}]}
 2018-08-30 19:57:23.895  INFO 11388 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
 2018-08-30 19:57:23.895  INFO 11388 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:04:24.273  INFO 9020 --- [restartedMain] com.huhan.blog.BlogApplication           : Starting BlogApplication on DESKTOP-A9KJ5U1 with PID 9020 (H:\IDEA\workspace\hblog\target\classes started by zss in H:\IDEA\workspace\hblog)
+2018-08-30 20:04:24.273 DEBUG 9020 --- [restartedMain] com.huhan.blog.BlogApplication           : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-08-30 20:04:24.273  INFO 9020 --- [restartedMain] com.huhan.blog.BlogApplication           : The following profiles are active: dev
+2018-08-30 20:04:24.458  INFO 9020 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6c3bd7a7: startup date [Thu Aug 30 20:04:24 CST 2018]; root of context hierarchy
+2018-08-30 20:04:28.600  INFO 9020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$823bc61e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-30 20:04:30.795  INFO 9020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-30 20:04:30.833  INFO 9020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-30 20:04:30.849  INFO 9020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-30 20:04:30.864  INFO 9020 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.7.0_80\bin;C:\Program Files\Java\jdk1.7.0_80\jre\bin;E:\Program Files\apache-maven-3.5.0\bin;E:\Program Files\apache-maven-3.5.0\bin;C:\play-1.2.7.eims;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\zss\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\zss\AppData\Local\Programs\Python\Python37\;C:\Users\zss\AppData\Local\Microsoft\WindowsApps;;.]
+2018-08-30 20:04:31.079  INFO 9020 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-30 20:04:31.079  INFO 9020 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6621 ms
+2018-08-30 20:04:31.251  INFO 9020 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-30 20:04:31.251  INFO 9020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-30 20:04:31.251  INFO 9020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-30 20:04:31.251  INFO 9020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-30 20:04:31.251  INFO 9020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-30 20:04:31.668  INFO 9020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-08-30 20:04:32.053  INFO 9020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-08-30 20:04:32.138  INFO 9020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-30 20:04:32.216  INFO 9020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-30 20:04:32.369  INFO 9020 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2018-08-30 20:04:32.385  INFO 9020 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-08-30 20:04:32.470  INFO 9020 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-30 20:04:32.826  INFO 9020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-30 20:04:34.667  INFO 9020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-30 20:04:35.644  INFO 9020 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-08-30 20:04:37.259  INFO 9020 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-30 20:04:38.368  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6c3bd7a7: startup date [Thu Aug 30 20:04:24 CST 2018]; root of context hierarchy
+2018-08-30 20:04:38.487  WARN 9020 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-30 20:04:38.610  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.BlogsController.list(org.springframework.data.domain.Pageable,com.huhan.blog.vo.BlogQuery,org.springframework.ui.Model)
+2018-08-30 20:04:38.618  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.huhan.blog.web.admin.BlogsController.search(org.springframework.data.domain.Pageable,com.huhan.blog.vo.BlogQuery,org.springframework.ui.Model)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.BlogsController.input(org.springframework.ui.Model)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.huhan.blog.web.admin.BlogsController.post(com.huhan.blog.po.Blog,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.BlogsController.deleteBlogById(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.BlogsController.editInput(java.lang.Long,org.springframework.ui.Model)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.LoginController.loginPage()
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login]}" onto public java.lang.String com.huhan.blog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete]}" onto public java.lang.String com.huhan.blog.web.admin.TagsController.deleteById(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input]}" onto public java.lang.String com.huhan.blog.web.admin.TagsController.addTagPre(org.springframework.ui.Model)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}]}" onto public java.lang.String com.huhan.blog.web.admin.TagsController.editTag(java.lang.Long,com.huhan.blog.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-30 20:04:38.620  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags]}" onto public java.lang.String com.huhan.blog.web.admin.TagsController.tagsList(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-08-30 20:04:38.628  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.TagsController.editTagPre(java.lang.Long,org.springframework.ui.Model)
+2018-08-30 20:04:38.628  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.huhan.blog.web.admin.TagsController.addTag(com.huhan.blog.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-30 20:04:38.630  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.TypesController.list(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-08-30 20:04:38.630  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.huhan.blog.web.admin.TypesController.addType(com.huhan.blog.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-30 20:04:38.630  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete]}" onto public java.lang.String com.huhan.blog.web.admin.TypesController.deleteById(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-30 20:04:38.630  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}]}" onto public java.lang.String com.huhan.blog.web.admin.TypesController.editType(com.huhan.blog.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-30 20:04:38.638  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.TypesController.editTypePre(java.lang.Long,org.springframework.ui.Model)
+2018-08-30 20:04:38.638  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.admin.TypesController.addTypesPre(org.springframework.ui.Model)
+2018-08-30 20:04:38.640  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.huhan.blog.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2018-08-30 20:04:38.640  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.huhan.blog.web.CommentController.post(com.huhan.blog.po.Comment,javax.servlet.http.HttpSession)
+2018-08-30 20:04:38.640  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.huhan.blog.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-08-30 20:04:38.640  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.huhan.blog.web.IndexController.search(org.springframework.data.domain.Pageable,org.springframework.ui.Model,java.lang.String)
+2018-08-30 20:04:38.640  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}]}" onto public java.lang.String com.huhan.blog.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2018-08-30 20:04:38.648  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-30 20:04:38.650  INFO 9020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-30 20:04:38.732  INFO 9020 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-30 20:04:38.732  INFO 9020 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-30 20:04:38.772  INFO 9020 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2018-08-30 20:04:39.064  INFO 9020 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-30 20:04:40.034  INFO 9020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-30 20:04:40.105  INFO 9020 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-30 20:04:40.105  INFO 9020 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-30 20:04:40.115  INFO 9020 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-08-30 20:04:40.286  INFO 9020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-30 20:04:40.286  INFO 9020 --- [restartedMain] com.huhan.blog.BlogApplication           : Started BlogApplication in 17.482 seconds (JVM running for 18.95)
+2018-08-30 20:04:42.326  INFO 9020 --- [http-nio-8080-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-30 20:04:42.326  INFO 9020 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-30 20:04:42.378  INFO 9020 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 52 ms
+2018-08-30 20:04:42.468  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:04:42.469  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/3', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[3, {}]}
+2018-08-30 20:04:42.919  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:04:42.921  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:04:44.037 ERROR 9020 --- [http-nio-8080-exec-10] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-10] Exception processing template "blog": An error happened during template parsing (template: "class path resource [templates/blog.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "session.user.nickName" (template: "blog" - line 591, col 84)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "session.user.nickName" (template: "blog" - line 591, col 84)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:165)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.NotEqualsExpression.executeNotEquals(NotEqualsExpression.java:74)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:98)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.ConditionalExpression.executeConditional(ConditionalExpression.java:209)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:77)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:126)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 54 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nickName' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:407)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:334)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 81 common frames omitted
+
+2018-08-30 20:04:44.069 ERROR 9020 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nickName' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:407)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:334)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:165)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.NotEqualsExpression.executeNotEquals(NotEqualsExpression.java:74)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:98)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.ConditionalExpression.executeConditional(ConditionalExpression.java:209)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:77)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:126)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-08-30 20:04:44.101 ERROR 9020 --- [http-nio-8080-exec-10] w.s.e.ErrorMvcAutoConfiguration$SpelView : Cannot render error page for request [/blog/3] and exception [An error happened during template parsing (template: "class path resource [templates/blog.html]")] as the response has already been committed. As a result, the response may have the wrong status code.
+2018-08-30 20:04:53.033  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:04:53.034  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/3', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[3, {}]}
+2018-08-30 20:04:53.088  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:04:53.088  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:04:53.177 ERROR 9020 --- [http-nio-8080-exec-5] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-5] Exception processing template "blog": An error happened during template parsing (template: "class path resource [templates/blog.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "session.user.nickName" (template: "blog" - line 591, col 84)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "session.user.nickName" (template: "blog" - line 591, col 84)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:165)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.NotEqualsExpression.executeNotEquals(NotEqualsExpression.java:74)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:98)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.ConditionalExpression.executeConditional(ConditionalExpression.java:209)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:77)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:126)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 54 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nickName' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:407)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:334)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 81 common frames omitted
+
+2018-08-30 20:04:53.182 ERROR 9020 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nickName' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:407)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:334)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:165)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.NotEqualsExpression.executeNotEquals(NotEqualsExpression.java:74)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:98)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.ConditionalExpression.executeConditional(ConditionalExpression.java:209)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:77)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:126)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-08-30 20:04:53.206 ERROR 9020 --- [http-nio-8080-exec-5] w.s.e.ErrorMvcAutoConfiguration$SpelView : Cannot render error page for request [/blog/3] and exception [An error happened during template parsing (template: "class path resource [templates/blog.html]")] as the response has already been committed. As a result, the response may have the wrong status code.
+2018-08-30 20:07:13.009  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:07:13.009  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/3', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[3, {}]}
+2018-08-30 20:07:13.078  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:07:13.078  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:07:13.161 ERROR 9020 --- [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "blog": An error happened during template parsing (template: "class path resource [templates/blog.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "session.user.nickName" (template: "blog" - line 591, col 84)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "session.user.nickName" (template: "blog" - line 591, col 84)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:165)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.NotEqualsExpression.executeNotEquals(NotEqualsExpression.java:74)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:98)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.ConditionalExpression.executeConditional(ConditionalExpression.java:209)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:77)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:126)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 54 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nickName' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:407)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:334)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 81 common frames omitted
+
+2018-08-30 20:07:13.164 ERROR 9020 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'nickName' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:407)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:334)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:165)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.NotEqualsExpression.executeNotEquals(NotEqualsExpression.java:74)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:98)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.ConditionalExpression.executeConditional(ConditionalExpression.java:209)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:77)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:126)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-08-30 20:07:13.177 ERROR 9020 --- [http-nio-8080-exec-1] w.s.e.ErrorMvcAutoConfiguration$SpelView : Cannot render error page for request [/blog/3] and exception [An error happened during template parsing (template: "class path resource [templates/blog.html]")] as the response has already been committed. As a result, the response may have the wrong status code.
+2018-08-30 20:07:24.080  INFO 9020 --- [http-nio-8080-exec-6] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:07:24.080  INFO 9020 --- [http-nio-8080-exec-6] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/3', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[3, {}]}
+2018-08-30 20:07:24.133  INFO 9020 --- [http-nio-8080-exec-6] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:07:24.134  INFO 9020 --- [http-nio-8080-exec-6] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:10:19.368  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:19.368  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/3', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[3, {}]}
+2018-08-30 20:10:19.427  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:19.427  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:10:30.021  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:30.021  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/3', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[3, {}]}
+2018-08-30 20:10:30.063  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:30.063  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:10:33.307  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:33.307  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/3', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[3, {}]}
+2018-08-30 20:10:33.424  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:33.424  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:10:39.241  INFO 9020 --- [http-nio-8080-exec-2] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:39.241  INFO 9020 --- [http-nio-8080-exec-2] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.index', 请求参数=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2018-08-30 20:10:39.287  WARN 9020 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2018-08-30 20:10:39.307  WARN 9020 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2018-08-30 20:10:39.320  INFO 9020 --- [http-nio-8080-exec-2] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:39.320  INFO 9020 --- [http-nio-8080-exec-2] com.huhan.blog.aspect.LogAspect          : Result: index
+2018-08-30 20:10:43.105  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:43.105  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/4', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[4, {}]}
+2018-08-30 20:10:43.119  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:43.119  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:10:45.909  INFO 9020 --- [http-nio-8080-exec-8] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:45.909  INFO 9020 --- [http-nio-8080-exec-8] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/4', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[4, {}]}
+2018-08-30 20:10:45.922  INFO 9020 --- [http-nio-8080-exec-8] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:45.922  INFO 9020 --- [http-nio-8080-exec-8] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:10:48.346  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:48.347  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/4', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[4, {}]}
+2018-08-30 20:10:48.360  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:48.360  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:10:52.125  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:52.125  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.index', 请求参数=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2018-08-30 20:10:52.155  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:52.155  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : Result: index
+2018-08-30 20:10:54.869  INFO 9020 --- [http-nio-8080-exec-2] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:54.869  INFO 9020 --- [http-nio-8080-exec-2] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/2', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[2, {}]}
+2018-08-30 20:10:54.890  INFO 9020 --- [http-nio-8080-exec-2] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:54.891  INFO 9020 --- [http-nio-8080-exec-2] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:10:56.524  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:56.525  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/2', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[2, {}]}
+2018-08-30 20:10:56.540  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:56.541  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:10:57.685  INFO 9020 --- [http-nio-8080-exec-9] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:10:57.685  INFO 9020 --- [http-nio-8080-exec-9] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/2', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[2, {}]}
+2018-08-30 20:10:57.702  INFO 9020 --- [http-nio-8080-exec-9] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:10:57.702  INFO 9020 --- [http-nio-8080-exec-9] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:11:00.876  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:11:00.876  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.index', 请求参数=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2018-08-30 20:11:00.899  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:11:00.900  INFO 9020 --- [http-nio-8080-exec-7] com.huhan.blog.aspect.LogAspect          : Result: index
+2018-08-30 20:11:04.325  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:11:04.326  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/1', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[1, {}]}
+2018-08-30 20:11:04.351  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:11:04.352  INFO 9020 --- [http-nio-8080-exec-5] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:11:05.524  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:11:05.524  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/1', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[1, {}]}
+2018-08-30 20:11:05.551  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:11:05.552  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:11:06.605  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:11:06.605  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/1', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[1, {}]}
+2018-08-30 20:11:06.650  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:11:06.650  INFO 9020 --- [http-nio-8080-exec-1] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:11:08.287  INFO 9020 --- [http-nio-8080-exec-9] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:11:08.288  INFO 9020 --- [http-nio-8080-exec-9] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/1', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[1, {}]}
+2018-08-30 20:11:08.309  INFO 9020 --- [http-nio-8080-exec-9] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:11:08.309  INFO 9020 --- [http-nio-8080-exec-9] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:11:09.214  INFO 9020 --- [http-nio-8080-exec-6] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:11:09.215  INFO 9020 --- [http-nio-8080-exec-6] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/1', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[1, {}]}
+2018-08-30 20:11:09.235  INFO 9020 --- [http-nio-8080-exec-6] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:11:09.235  INFO 9020 --- [http-nio-8080-exec-6] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:11:09.798  INFO 9020 --- [http-nio-8080-exec-4] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:11:09.798  INFO 9020 --- [http-nio-8080-exec-4] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/blog/1', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.blog', 请求参数=[1, {}]}
+2018-08-30 20:11:09.821  INFO 9020 --- [http-nio-8080-exec-4] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:11:09.821  INFO 9020 --- [http-nio-8080-exec-4] com.huhan.blog.aspect.LogAspect          : Result: blog
+2018-08-30 20:11:12.396  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 20:11:12.397  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.index', 请求参数=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2018-08-30 20:11:12.419  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 20:11:12.419  INFO 9020 --- [http-nio-8080-exec-3] com.huhan.blog.aspect.LogAspect          : Result: index
+2018-08-30 21:24:02.696  WARN 9020 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m29s875ms530µs293ns).
+2018-08-30 21:24:07.146  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : ***************请求记录**************
+2018-08-30 21:24:07.146  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : 请求记录信息: RequestLog{请求地址='http://localhost:8080/', 请求的ip='0:0:0:0:0:0:0:1', 请求类中的方法='com.huhan.blog.web.IndexController.index', 请求参数=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2018-08-30 21:24:07.196  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : ***************响应结果***************
+2018-08-30 21:24:07.196  INFO 9020 --- [http-nio-8080-exec-10] com.huhan.blog.aspect.LogAspect          : Result: index
