@@ -5,42 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c752560-9f4e-41ee-8cc8-f4cb699d52d3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/dao/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/service/ServiceImpl/CommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/web/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/dao/CommentRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/CommentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/serviceImpl/CommentServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/web/CommentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/image/avatar.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/blog-dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huhan/blog/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/aspect/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huhan/blog/po/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/po/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huhan/blog/service/serviceImpl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/service/serviceImpl/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huhan/blog/service/serviceImpl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/service/serviceImpl/TagServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huhan/blog/service/serviceImpl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/service/serviceImpl/TypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huhan/blog/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/web/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huhan/blog/web/admin/BlogsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huhan/blog/web/admin/BlogsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/me.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/huhan/blog/aspect/LogAspect$RequestLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/aspect/LogAspect$RequestLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/huhan/blog/aspect/LogAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/aspect/LogAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/huhan/blog/po/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/po/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/ServiceImpl/BlogServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/serviceImpl/BlogServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/ServiceImpl/BlogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/serviceImpl/BlogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/ServiceImpl/TagServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/serviceImpl/TagServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/ServiceImpl/TypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/serviceImpl/TypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/ServiceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/huhan/blog/web/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/huhan/blog/web/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql/blog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql/blog.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/me.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blog.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -121,8 +86,12 @@
       <file leaf-file-name="BlogServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/huhan/blog/service/serviceImpl/BlogServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="147" column="42" selection-start-line="147" selection-start-column="42" selection-end-line="147" selection-end-column="42" />
+            <state relative-caret-position="544">
+              <caret line="147" column="43" lean-forward="true" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
+              <folding>
+                <element signature="e#1290#1291#0" expanded="true" />
+                <element signature="e#1338#1339#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -246,7 +215,7 @@
       <path value="$PROJECT_DIR$/src/main/resources/static/lib/editormd/lib/codemirror/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1400" />
@@ -379,7 +348,7 @@
       <updated>1535503134459</updated>
       <workItem from="1535503137055" duration="6266000" />
       <workItem from="1535588269315" duration="2484000" />
-      <workItem from="1535591401852" duration="16579000" />
+      <workItem from="1535591401852" duration="17481000" />
     </task>
     <task id="LOCAL-00001" summary="sql更新">
       <created>1535537274355</created>
@@ -391,7 +360,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18092000" />
+    <option name="totallyTimeSpent" value="18994000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -412,7 +381,7 @@
       <window_info anchor="right" id="Database Changes" order="10" weight="0.2675906" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" order="1" visible="true" weight="0.32997763" />
+      <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.32997763" />
       <window_info anchor="right" id="Database" order="2" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
@@ -855,8 +824,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/huhan/blog/service/serviceImpl/BlogServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="147" column="42" selection-start-line="147" selection-start-column="42" selection-end-line="147" selection-end-column="42" />
+        <state relative-caret-position="544">
+          <caret line="147" column="43" lean-forward="true" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
+          <folding>
+            <element signature="e#1290#1291#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
