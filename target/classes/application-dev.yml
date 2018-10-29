@@ -14,7 +14,8 @@ logging:
     root: info
     com.huhan: debug
   file: log/blog-dev.log
-
+server:
+  port: 9000
 
 
 
